@@ -69,7 +69,6 @@ public class EntradaSalida {
      * @author Adrian Videira
      */
 
-
     public static void entradaTexto (String comentario){ //Getter
             try{
                 Scanner m1 = new Scanner(System.in);
@@ -154,7 +153,7 @@ public class EntradaSalida {
                         System.out.println("El resultado es: " + division);
                         break;
                 }
-                // return 0.0f;
+
             } else {
 
                 System.out.println("null");
