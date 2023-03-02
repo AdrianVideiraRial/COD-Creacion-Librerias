@@ -174,12 +174,43 @@ public class EntradaSalida {
 
     public static double raizCuadrada (double radicando){
         Scanner memoria = new Scanner(System.in);
-        System.out.println("Indica el índice para calcular la raiz - Debe ser un número entero - ");
+        double raiz;
+        int selectRaiz = 0;
+        int indiceRaiz;
+        System.out.println("Selecciona operacion: ");
+        System.out.println(" 0- Raiz Cuadrada / 1- Raiz Cúbica / 2- Raiz de n");
+        selectRaiz = memoria.nextInt();
 
+        try {
+            if (selectRaiz <= 2) {
 
+                switch (selectRaiz) {
+                    case (0):
+                        raiz = Math.sqrt(radicando);
+                        System.out.println("La raiz cuadrada es: " + raiz);
+                        break;
+                    case (1):
+                        raiz = Math.cbrt(radicando);
+                        System.out.println("La raiz cúbica es: " + raiz);
+                        break;
+                    case (2):
+                        System.out.println("Indica un numero entero como indice para realizar la operacion");
+                        indiceRaiz = memoria.nextInt();
+                        raiz = Math.pow(radicando, (1.0/indiceRaiz));
+                        System.out.println("La raiz con inice " + indiceRaiz + " es igual a: " + raiz);
+                        break;
+                    default:
+                        System.out.println("Ha ocurrido un error");
+                }
 
-
-        return 0;
+            } else {
+                System.out.println("Error");
+                System.out.println("Por favor introduce un numero entero entre 0 y 2");
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return 0.0;
     }
 
 
