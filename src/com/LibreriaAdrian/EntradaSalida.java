@@ -168,4 +168,19 @@ public class EntradaSalida {
             return 0.0f;
         }
 
+    /**
+     * Metodo para calcular raiz cuadrada o cúbica
+     */
+
+    public static double raizCuadrada (double radicando){
+        Scanner memoria = new Scanner(System.in);
+        System.out.println("Indica el índice para calcular la raiz - Debe ser un número entero - ");
+
+
+
+
+        return 0;
+    }
+
+
 }
